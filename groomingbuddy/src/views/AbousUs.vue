@@ -1,1 +1,1 @@
-<html class="page"></html>
+<html class="page 2"></html>
