@@ -25,16 +25,53 @@
         :visible="false"
       />
       
-      <div class="text-wrapper-4">Services</div>
-      <div class="text-wrapper-5">Appointments</div>
-      <div class="text-wrapper-6">About</div>
-      <div class="text-wrapper-7">Contact</div>
+      <Buttons
+        class="buttons-Services"
+        content="text-icon"
+        divClassName="design-component-instance-node"
+        size="small"
+        state="default"
+        style="light"
+        text="Services"
+        type="negative"
+        :visible="false"
+      />
 
+      <Buttons
+        class="buttons-Appointments"
+        content="text-icon"
+        divClassName="design-component-instance-node"
+        size="small"
+        state="default"
+        style="light"
+        text="Appointments"
+        type="negative"
+        :visible="false"
+      />
 
-      <div class="text-wrapper-4">Services</div>
-      <div class="text-wrapper-5">Appointments</div>
-      <div class="text-wrapper-6">About</div>
-      <div class="text-wrapper-7">Contact</div>
+      <Buttons
+        class="buttons-About"
+        content="text-icon"
+        divClassName="design-component-instance-node"
+        size="small"
+        state="default"
+        style="light"
+        text="About"
+        type="negative"
+        :visible="false"
+      />
+
+      <Buttons
+        class="buttons-Contact"
+        content="text-icon"
+        divClassName="design-component-instance-node"
+        size="small"
+        state="default"
+        style="light"
+        text="Contact"
+        type="negative"
+        :visible="false"
+      />
 
       <Buttons
         class="buttons-instance"
@@ -157,7 +194,7 @@ export default {
   line-height: 280px;
   position: absolute;
   text-shadow: 6px 6px 4px #00000040;
-  top: -1px;
+  top: -20px;
   white-space: nowrap;
 }
 
@@ -173,80 +210,106 @@ export default {
   border-radius:15px !important;
   display: flex !important;
   height: 40px !important;
-  left: 422px !important; /* Adjust left position to match the old "text-wrapper-3" */
+  left: 420px !important; 
   position: absolute !important;
-  top: 45px !important; /* Adjust top position to match the old "text-wrapper-3" */
+  top: 25px !important; 
   width: 82px !important;
   font-family: "Abel-Regular", Helvetica !important;
   font-size: 24px !important;
   font-weight: 400 !important;
   letter-spacing: 0 !important;
   line-height: normal !important;
-  background-color: #3a9ace2e;
-  border-color: #3a9ace2e;
-  color: #ffffff;
+  background-color: #24242417;
+  border-color: #24242417;
+  color: #ffffffda;
 }
 
-.macbook-pro .text-wrapper-4 {
-  color: #ffffff;
-  font-family: "Abel-Regular", Helvetica;
-  font-size: 24px;
-  font-weight: 400;
-  left: 507px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 45px;
-  width: 82px;
+.macbook-pro .buttons-Services {
+  border-radius:15px !important;
+  display: flex !important;
+  height: 40px !important;
+  left: 510px !important; 
+  position: absolute !important;
+  top: 25px !important; 
+  width: 108px !important;
+  font-family: "Abel-Regular", Helvetica !important;
+  font-size: 24px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+  line-height: normal !important;
+  background-color: #24242417;
+  border-color: #24242417;
+  color: #ffffffda;
 }
 
-.macbook-pro .text-wrapper-5 {
-  color: #ffffff;
-  font-family: "Abel-Regular", Helvetica;
-  font-size: 24px;
-  font-weight: 400;
-  left: 620px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 45px;
-  width: 82px;
+.macbook-pro .buttons-Appointments {
+  border-radius:15px !important;
+  display: flex !important;
+  height: 40px !important;
+  left: 625px !important; 
+  position: absolute !important;
+  top: 25px !important; 
+  width: 163px !important;
+  font-family: "Abel-Regular", Helvetica !important;
+  font-size: 24px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+  line-height: normal !important;
+  background-color: #24242417;
+  border-color: #24242417;
+  color: #ffffffda;
 }
 
-.macbook-pro .text-wrapper-6 {
-  color: #ffffff;
-  font-family: "Abel-Regular", Helvetica;
-  font-size: 24px;
-  font-weight: 400;
-  left: 880px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 45px;
-  width: 82px;
+.macbook-pro .buttons-About {
+  border-radius:15px !important;
+  display: flex !important;
+  height: 40px !important;
+  left: 795px !important; 
+  position: absolute !important;
+  top: 25px !important; 
+  width: 78px !important;
+  font-family: "Abel-Regular", Helvetica !important;
+  font-size: 24px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+  line-height: normal !important;
+  background-color: #24242417;
+  border-color: #24242417;
+  color: #ffffffda;
 }
 
-.macbook-pro .text-wrapper-7 {
-  color: #ffffff;
-  font-family: "Abel-Regular", Helvetica;
-  font-size: 24px;
-  font-weight: 400;
-  left: 785px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 45px;
-  width: 82px;
+.macbook-pro .buttons-Contact {
+  border-radius:15px !important;
+  display: flex !important;
+  height: 40px !important;
+  left: 880px !important; 
+  position: absolute !important;
+  top: 25px !important; 
+  width: 100px !important;
+  font-family: "Abel-Regular", Helvetica !important;
+  font-size: 24px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+  line-height: normal !important;
+  background-color: #24242417;
+  border-color: #24242417;
+  color: #ffffffda;
 }
 
 .macbook-pro .buttons-instance {
   border-radius: 15px !important;
+  font-size: 18px;
+  justify-content: center; 
+  align-items: center;
   display: flex !important;
   height: 48px !important;
   left: 1325px !important;
   position: absolute !important;
   top: 47px !important;
   width: 147px !important;
+  background-color: #ffffff05;
+  border-color: #ffffff;
+  color: #ffffffda;
 }
 
 .macbook-pro .design-component-instance-node {
@@ -261,12 +324,18 @@ export default {
 
 .macbook-pro .buttons-2 {
   border-radius: 15px !important;
+  font-size: 18px;
+  justify-content: center; 
+  align-items: center;
   display: flex !important;
   height: 48px !important;
   left: 1150px !important;
   position: absolute !important;
   top: 47px !important;
   width: 147px !important;
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: #000000da;
 }
 </style>
 
