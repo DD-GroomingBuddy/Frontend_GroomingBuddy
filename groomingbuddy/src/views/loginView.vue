@@ -22,7 +22,7 @@
               </div>
               <div class="frame-2">
                 <div class="frame-5">
-                  <div class="text-wrapper-8">Username</div>
+                  <div class="text-wrapper-8">Usernameee</div>
                   <img class="line" alt="Line" src="line-1.svg" />
                 </div>
                 <div class="frame-5">
