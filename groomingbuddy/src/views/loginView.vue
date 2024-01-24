@@ -68,17 +68,44 @@
         />
 
 
-        <Buttons
-          class="buttons-home"
-          content="text-icon"
-          divClassName="design-component-instance-node"
-          size="small"
-          state="default"
-          style="light"
-          text="Home"
-          type="negative"
-          :visible="false"
+        
+        
+       
+  <router-link to="/home" class="buttons-home">
+    <Buttons
+      content="text-icon"
+      divClassName="design-component-instance-node"
+      size="small"
+      state="default"
+      style="light"
+      text="Home"
+      type="negative"
+      :visible="false"
+    />
+  </router-link>
+
+
+
+  
+
+
+  
+
         />
+
+
+        <router-link to="/" class="buttons-home">
+    <Buttons
+      content="text-icon"
+      divClassName="design-component-instance-node"
+      size="small"
+      state="default"
+      style="light"
+      text="Home"
+      type="negative"
+      :visible="false"
+    />
+  </router-link>
         <Buttons
           class="buttons-Services"
           content="text-icon"

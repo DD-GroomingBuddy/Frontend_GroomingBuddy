@@ -97,7 +97,7 @@
   }
   
   .macbook-pro .overlap {
-    background-image: url(./rectangle-38.png);
+    background-image: url(../assets/logo.png);
     background-position: 50% 50%;
     background-size: cover;
     height: 441px;
