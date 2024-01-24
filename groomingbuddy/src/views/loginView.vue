@@ -92,8 +92,6 @@
   
 
         />
-
-
         <router-link to="/" class="buttons-home">
     <Buttons
       content="text-icon"
