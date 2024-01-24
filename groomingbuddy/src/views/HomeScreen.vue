@@ -1,18 +1,23 @@
 <template>
     <div>
-      <PasPozadina/>
+        <PasPozadina>
+            <GroomingBuddyTitle/>
+        </PasPozadina>
     </div>
   </template>
   
   <script>
-  import PasPozadina from '../components/PasPozadina.vue';
+
+import GroomingBuddyTitle from '@/components/GroomingBuddyTitle.vue';
+import PasPozadina from '../components/PasPozadina.vue';
   
   export default {
-    name: 'HomeScreen',
-    components: {
+  name: 'HomeScreen',
+  components: {
     PasPozadina,
+    GroomingBuddyTitle
 },
-  };
+};
   </script>
   
   <style lang="scss">

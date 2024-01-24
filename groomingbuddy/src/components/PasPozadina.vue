@@ -1,11 +1,11 @@
 <template>
-    <div class="background-image">
+    <div class="image">
     <slot></slot>
     </div>
 </template>
 
   <style scoped>
-  .background-image {
+  .image {
     background-image: url('../assets/doge.JPG');
     background-size: cover;
     background-position: center;
