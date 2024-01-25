@@ -2,8 +2,9 @@
   <div class="container text-center" :style="{ backgroundColor: skinColor }">
     <h1 class="display-4 mt-5 see-through-text">SERVICES</h1>
 
+    <!-- Grooming Table -->
     <div class="service-table mt-5">
-      <h2>Service Pricing</h2>
+      <h2>Grooming Pricing</h2>
       <table>
         <thead>
           <tr>
@@ -13,16 +14,70 @@
         </thead>
         <tbody>
           <tr>
-            <td class="service-type">Grooming</td>
-            <td class="price">$50</td>
+            <td class="service-type">Hair Brushing</td>
+            <td class="price">€40</td>
           </tr>
           <tr>
-            <td class="service-type">Bathing</td>
-            <td class="price">$30</td>
+            <td class="service-type">Ear Cleaning</td>
+            <td class="price">€20</td>
           </tr>
           <tr>
-            <td class="service-type">Additional</td>
-            <td class="price">$20</td>
+            <td class="service-type">Nail Trim</td>
+            <td class="price">€30</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Bath and Hygiene Table -->
+    <div class="service-table mt-5">
+      <h2>Bath and Hygiene Pricing</h2>
+      <table>
+        <thead>
+          <tr>
+            <th class="service-type">Service Type</th>
+            <th class="price">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="service-type">Regular Bath</td>
+            <td class="price">€25</td>
+          </tr>
+          <tr>
+            <td class="service-type">Dental Care</td>
+            <td class="price">€15</td>
+          </tr>
+          <tr>
+            <td class="service-type">Pawdicure</td>
+            <td class="price">€15</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Additional Table -->
+    <div class="service-table mt-5">
+      <h2>Additional Services Pricing</h2>
+      <table>
+        <thead>
+          <tr>
+            <th class="service-type">Service Type</th>
+            <th class="price">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="service-type">Flea Treatment</td>
+            <td class="price">€20</td>
+          </tr>
+          <tr>
+            <td class="service-type">De-shedding</td>
+            <td class="price">€25</td>
+          </tr>
+          <tr>
+            <td class="service-type">Aromatherapy</td>
+            <td class="price">€15</td>
           </tr>
         </tbody>
       </table>
@@ -40,10 +95,9 @@ export default {
 };
 </script>
 
-
 <style lang="css">
 .container {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Your-Fancy-Font', Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -88,14 +142,17 @@ export default {
   width: 70%;
   margin: auto;
   border-collapse: collapse;
-  margin-top: 15px;
+  margin-top: 20px; 
 }
 
 .service-table th,
 .service-table td {
   border: 1px solid #3a99ce;
-  padding: 15px;
+  padding: 20px;
   text-align: center;
+  font-weight: bold; 
+  font-size: 18px; 
+  font-family: 'Your-Fancy-Font', Avenir, Helvetica, Arial, sans-serif;
 }
 
 .service-table th {
