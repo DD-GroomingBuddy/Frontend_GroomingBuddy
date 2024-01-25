@@ -38,7 +38,9 @@
               </div>
 
               <p class="small mb-5 pb-lg-2"><a class="text-muted" href="#!"></a></p>
-              <p>Already have an account? <a href="#!" class="link-info">Login</a></p>
+              <router-link to="/login" v-slot="{ navigate }">
+                <p>Already have an account? <a href="#!" class="link-info">Login</a></p>
+              </router-link>
             </form>
           </div>
         </div>

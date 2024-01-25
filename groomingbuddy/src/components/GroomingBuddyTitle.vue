@@ -1,7 +1,10 @@
 <template>
     <div>
       <h1 class="grooming-buddy-title">Grooming <span class="buddy-text">Buddy</span></h1>
-      <button class="appointment-button"><span class="plus-text">+</span> Appointment</button>
+      <router-link to="/appointments" v-slot="{ navigate }">
+        <button class="appointment-button" @click="navigate"><span class="plus-text">+</span> Appointment</button>
+    </router-link>
+      
     </div>
   </template>
   

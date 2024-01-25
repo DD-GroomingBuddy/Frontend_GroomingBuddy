@@ -27,7 +27,11 @@
               </div>
 
               <p class="small mb-5 pb-lg-2"><a class="text-muted" href="#!">Forgot password?</a></p>
-              <p>Don't have an account? <a href="#!" class="link-info">Sign up</a></p>
+              <router-link to="/signup" v-slot="{ navigate }">
+                <p>Don't have an account? <a @click="navigate" class="link-info">Sign up</a></p>
+              </router-link>
+
+              
             </form>
           </div>
         </div>
