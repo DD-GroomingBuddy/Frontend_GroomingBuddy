@@ -38,6 +38,11 @@ const routes = [
     path: '/services',
     name: 'services',
     component: () => import(/* webpackChunkName: "services" */ '../views/Services.vue')
+  },
+  {
+    path: '/thankyoucontact',
+    name: 'thankyoucontact',
+    component: () => import(/* webpackChunkName: "thankyoucontact" */ '../views/ThankYouContact.vue')
   }]
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),

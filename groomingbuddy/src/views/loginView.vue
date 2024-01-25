@@ -26,7 +26,7 @@
                 <button class="btn btn-info btn-lg btn-block" type="submit">Login</button>
               </div>
 
-              <p class="small mb-5 pb-lg-2"><a class="text-muted" href="#!">Forgot password?</a></p>
+              <p class="small mb-5 pb-lg-2"><a class="text-muted"></a></p>
               <router-link to="/signup" v-slot="{ navigate }">
                 <p>Don't have an account? <a @click="navigate" class="link-info">Sign up</a></p>
               </router-link>
@@ -38,7 +38,9 @@
 
         <div class="col-sm-6 px-0 d-none d-sm-block">
           <img src="@/assets/Little_white_dog.png"
-            alt="Login image" class="w-100 vh-100" style="object-fit: cover; object-position: left;">
+            alt="Login image"
+            class="w-50 h-50"
+            style="object-fit: cover; object-position: bottom; margin-top: 390px; margin-left: 50px;">
         </div>
       </div>
     </div>

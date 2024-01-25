@@ -2,7 +2,7 @@
   <div class="container text-center" :style="{ backgroundColor: skinColor }">
     <h1 class="display-4 mt-5 see-through-text">SERVICES</h1>
 
-    <!-- Grooming Table -->
+    
     <div class="service-table mt-5">
       <h2>Grooming Pricing</h2>
       <table>
@@ -29,7 +29,7 @@
       </table>
     </div>
 
-    <!-- Bath and Hygiene Table -->
+   
     <div class="service-table mt-5">
       <h2>Bath and Hygiene Pricing</h2>
       <table>
@@ -56,7 +56,7 @@
       </table>
     </div>
 
-    <!-- Additional Table -->
+    
     <div class="service-table mt-5">
       <h2>Additional Services Pricing</h2>
       <table>
@@ -102,8 +102,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  padding: 60px;
-  border-radius: 150px;
+  padding: 0px;
+  border-radius: 50px;
 }
 
 .see-through-text {
