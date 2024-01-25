@@ -1,7 +1,7 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
       <div class="container">
-  
+        
         <button
           class="navbar-toggler"
           type="button"
@@ -33,10 +33,14 @@
             </li>
           </ul>
         </div>
-  
+
         <div class="ml-auto">
-          <button class="btn btn-outline-primary mr-2">Login</button>
-          <button class="btn btn-primary">Sign Up</button>
+            <router-link to="/login">
+                <button class="btn btn-primary">Login</button>
+            </router-link>
+            <router-link to="/signup">
+                <button class="btn btn-primary">Sign Up</button>
+            </router-link>
         </div>
       </div>
     </nav>
@@ -49,7 +53,7 @@
     name: 'Navbar', 
   };
   </script>
-  
   <style>
+  
   </style>
   

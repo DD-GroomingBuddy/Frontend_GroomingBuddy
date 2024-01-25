@@ -10,13 +10,13 @@
     },
     methods: {
       handleClick() {
-        // Handle button click logic
+   
       },
     },
   };
   </script>
   
   <style scoped>
-  /* Add your button styling here */
+  
   </style>
   

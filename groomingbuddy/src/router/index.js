@@ -23,15 +23,22 @@ const routes = [
     name: 'signup',
     component: () => import(/* webpackChunkName: "signup" */ '../views/SignUp.vue')
   },
+
+  {
+    path: '/contact',
+    name: 'contact',
+    component: () => import(/* webpackChunkName: "contact" */ '../views/Contact.vue')
+  },
+  {
+    path: '/appointments',
+    name: 'appointments',
+    component: () => import(/* webpackChunkName: "appointments" */ '../views/Appointments.vue')
+  },
   {
     path: '/services',
     name: 'services',
     component: () => import(/* webpackChunkName: "services" */ '../views/Services.vue')
-  }
-
-
-]
-
+  }]
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes

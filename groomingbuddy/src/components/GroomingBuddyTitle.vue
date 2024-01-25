@@ -1,7 +1,7 @@
 <template>
     <div>
       <h1 class="grooming-buddy-title">Grooming <span class="buddy-text">Buddy</span></h1>
-      <button class="appointment-button">+ Appointment</button>
+      <button class="appointment-button"><span class="plus-text">+</span> Appointment</button>
     </div>
   </template>
   
@@ -27,7 +27,7 @@
   .buddy-text {
     color: #3a99ce; 
   }
-
+  
   .appointment-button {
   background-color: #3a99ce;
   color: white;
@@ -44,9 +44,25 @@
   background-color: #2c7bb6; 
 }
 
+.plus-text {
+    font-weight: bolder;
+}
+
+@media (max-width: 1600px) {
+  .appointment-button {
+    margin-left: -50%;
+  }
+}
+
 @media (max-width: 1200px) {
   .appointment-button {
     margin-left: -40%;
+  }
+}
+
+@media (max-width: 800px) {
+  .appointment-button {
+    margin-left: -30%;
   }
 }
   </style>
