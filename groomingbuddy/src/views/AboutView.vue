@@ -13,7 +13,7 @@
                 In GroomingBuddy, we understand that pets are more than just animals; they are beloved members of the family.
               </p>
               <p class="description-p text-muted pe-0 pe-lg-0">
-                With this in mind, our skilled and compassionate team provides exceptional grooming services tailored to the specific needs and preferences of each pet.
+                With this in mind, our skilled and  compassionate team provides exceptional grooming services tailored to the specific needs and preferences of each pet.
               </p>
               <div class="sosmed-horizontal pt-3 pb-3">
                 <a href="#"><i class="fa fa-facebook"></i></a>
