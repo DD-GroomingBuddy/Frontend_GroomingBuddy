@@ -5,7 +5,7 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: () => import(/* webpackChunkName: "about" */ '../views/HomeScreen.vue')
+    component: () => import(/* webpackChunkName: "home" */ '../views/HomeScreen.vue')
   },
   {
     path: '/about',
@@ -17,13 +17,11 @@ const routes = [
     name: 'login',
     component: () => import(/* webpackChunkName: "login" */ '../views/loginView.vue')
   },
-
   {
     path: '/signup',
     name: 'signup',
     component: () => import(/* webpackChunkName: "signup" */ '../views/SignUp.vue')
   },
-
   {
     path: '/contact',
     name: 'contact',
@@ -35,6 +33,11 @@ const routes = [
     component: () => import(/* webpackChunkName: "appointments" */ '../views/Appointments.vue')
   },
   {
+    path: '/register-appointment',
+    name: 'registerAppointment',
+    component: () => import(/* webpackChunkName: "registerAppointment" */ '../components/registerAppointment.vue')
+  },
+  {
     path: '/services',
     name: 'services',
     component: () => import(/* webpackChunkName: "services" */ '../views/Services.vue')
@@ -43,10 +46,18 @@ const routes = [
     path: '/thankyoucontact',
     name: 'thankyoucontact',
     component: () => import(/* webpackChunkName: "thankyoucontact" */ '../views/ThankYouContact.vue')
-  }]
+  },
+  {
+    path: '/profile',
+    name: 'profile',
+    component: () => import(/* webpackChunkName: "profile" */ '../views/profileView.vue')
+  }
+]
+
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
 })
+
 
 export default router
