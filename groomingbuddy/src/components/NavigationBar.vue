@@ -23,7 +23,7 @@
             <router-link to="/services" class="nav-link">Services</router-link>
           </li>
           <li class="nav-item">
-            <router-link v-if="showAdminBoard" to="/appointments" class="nav-link">Appointments</router-link>
+            <router-link v-if="currentUser" to="/appointments" class="nav-link">Appointments</router-link>
           </li>
           <li class="nav-item">
             <router-link to="/about" class="nav-link">About</router-link>

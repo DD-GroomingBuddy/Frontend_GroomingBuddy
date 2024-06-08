@@ -11,12 +11,8 @@
         <input type="text" id="service" class="form-control" v-model="service" required />
       </div>
       <div class="form-group">
-        <label for="appointmentDate">Appointment Date</label>
-        <input type="date" id="appointmentDate" class="form-control" v-model="appointmentDate" required />
-      </div>
-      <div class="form-group">
-        <label for="appointmentTime">Appointment Time</label>
-        <input type="time" id="appointmentTime" class="form-control" v-model="appointmentTime" required />
+        <label for="appointmentDateTime">Appointment Date and Time</label>
+        <input type="datetime-local" id="appointmentDateTime" class="form-control" v-model="appointmentDateTime" required />
       </div>
       <button type="submit" class="btn btn-primary mt-4">Submit</button>
     </form>
@@ -24,28 +20,20 @@
 </template>
 
 <script>
-import axios from 'axios';
+import AuthService from "../services/auth.service";
 
 export default {
   data() {
     return {
       phoneNumber: '',
       service: '',
-      appointmentDate: '',
-      appointmentTime: '',
+      appointmentDateTime: '',
     };
   },
   methods: {
     async registerAppointment() {
       try {
-        const response = await axios.post('http://localhost:3000/api/appointment/add', {
-          phoneNumber: this.phoneNumber,
-          service: this.service,
-          date: this.appointmentDate,
-          time: this.appointmentTime,
-        }, {
-          withCredentials: true // Ensure cookies are sent with the request
-        });
+        const response = await AuthService.addAppointment(this.phoneNumber, this.service, this.appointmentDateTime);
         console.log('Appointment registered:', response.data);
         this.$router.push('/appointments');
       } catch (error) {
