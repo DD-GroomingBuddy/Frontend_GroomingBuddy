@@ -9,17 +9,19 @@
     <div class="service-content mt-5">
       <h2 class="reserved-appointments-title">RESERVED APPOINTMENTS</h2>
 
-      <div v-if="appointments.length === 0" class="no-appointments">
-        <p>No set appointments at the moment.</p>
-      </div>
+      <div v-if="loading">Loading...</div>
+      <div v-else-if="error">{{ error }}</div>
       <div v-else>
-        <div v-for="appointment in appointments" :key="appointment._id" class="appointment">
-          <div class="appointment-details">
-            <p><strong>Phone Number:</strong> {{ appointment.phoneNumber }}</p>
-            <p><strong>Service:</strong> {{ appointment.service }}</p>
-            <p><strong>Date:</strong> {{ new Date(appointment.date).toLocaleDateString() }}</p>
-            <p><strong>Time:</strong> {{ new Date(appointment.time).toLocaleTimeString() }}</p>
-          </div>
+        <div v-if="appointments.length === 0" class="no-appointments">
+          <p>No set appointments at the moment.</p>
+        </div>
+        <div v-else>
+          <AppointmentCard
+            v-for="appointment in appointments"
+            :key="appointment._id"
+            :appointment="appointment"
+            :currentUser = "currentUser"
+          />
         </div>
       </div>
     </div>
@@ -27,29 +29,46 @@
 </template>
 
 <script>
-import axios from 'axios';
+import AuthService from "../services/auth.service";
+import { ref, onMounted } from "vue";
+import AppointmentCard from "../components/AppointmentCard.vue";
 
 export default {
+  components: {
+    AppointmentCard,
+  },
   data() {
     return {
-      skinColor: '#ffe0bd',
-      appointments: [],
+      skinColor: "#ffe0bd",
     };
   },
-  async created() {
-    try {
-      const response = await axios.get('/api/appointments', {
-        params: { userId: this.$route.query.userId }
-      });
-      this.appointments = response.data;
-    } catch (error) {
-      console.error('Error fetching appointments:', error);
-    }
+  setup() {
+    const appointments = ref([]);
+    const loading = ref(true);
+    const error = ref(null);
+
+    onMounted(async () => {
+      try {
+        const data = await AuthService.getAppointments();
+        appointments.value = data;
+      } catch (err) {
+        error.value = "Error fetching appointments";
+        console.error(err);
+      } finally {
+        loading.value = false;
+      }
+    });
+
+    return {
+      appointments,
+      loading,
+      error,
+    };
   },
 };
 </script>
 
-<style lang="css">
+<style>
 .reserved-appointments-title {
   font-size: 24px;
   color: #3a99ce;

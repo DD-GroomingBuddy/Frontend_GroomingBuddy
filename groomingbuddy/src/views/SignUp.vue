@@ -1,5 +1,5 @@
 <template>
-  <section class="vh-100">
+  <!-- <section class="vh-100">
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-6 text-black">
@@ -54,29 +54,15 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
+  <dogo-signup></dogo-signup>
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      username: "",
-      email: "",
-      number: "",
-      password: "",
-    };
-  },
-  methods: {
-    signup() {
-      console.log("Sign up button clicked");
-      console.log("Username:", this.username);
-      console.log("Email address:", this.email);
-      console.log("Phone number:", this.number);
-      console.log("Password:", this.password);
+import DogoSignup from '../components/DogoSignup.vue';
 
-    },
-  },
+export default {
+  components: { DogoSignup },
 };
 </script>
 
