@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "https://groomingbuddy.netlify.app/";
+const API_URL = "https://backend-groomingbuddy-1.onrender.com/";
 
 const getPublicContent = () => {
   return axios.get(API_URL + "all");
