@@ -1,7 +1,7 @@
 import axios from "axios";
 import authHeader from "./auth.header";
 
-const API_URL = "https://groomingbuddy.netlify.app";
+const API_URL = "https://groomingbuddy.netlify.app/";
 
 const register = (username, email, password) => {
   return axios.post(API_URL + "signup", {
