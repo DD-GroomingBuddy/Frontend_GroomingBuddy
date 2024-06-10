@@ -89,8 +89,9 @@
   
         AuthService.login(username.value, password.value)
           .then(() => {
-            window.location.reload();
-            navigate.push({name: "home", replace: true});
+            navigate.push({name: "home", replace: true}).then(() =>{
+              window.location.reload();
+            });
           })
           .catch((error) => {
             const resMessage =
