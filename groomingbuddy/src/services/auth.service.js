@@ -1,7 +1,7 @@
 import axios from "axios";
 import authHeader from "./auth.header";
 
-const API_URL = "https://backend-groomingbuddy-1.onrender.com/";
+const API_URL = "https://backend-groomingbuddy-1.onrender.com/api/auth/";
 
 const register = (username, email, password) => {
   return axios.post(API_URL + "signup", {
