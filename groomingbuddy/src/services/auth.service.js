@@ -72,6 +72,13 @@ const deleteAppointment = async (appointmentId) => {
   return response;
 }
 
+const updateAppointmentStatus = async (appointmentId) => {
+  const response = await axios.put(API_URL + "appointment/updateStatus", {
+    id: appointmentId
+  }, { headers: authHeader() });
+  return response;
+}
+
 const AuthService = {
   register,
   login,
@@ -79,7 +86,8 @@ const AuthService = {
   getCurrentUser,
   getAppointments,
   addAppointment,
-  deleteAppointment
+  deleteAppointment,
+  updateAppointmentStatus
 };
 
 export default AuthService;

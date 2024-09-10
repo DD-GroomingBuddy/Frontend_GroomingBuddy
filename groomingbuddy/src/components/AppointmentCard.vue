@@ -6,9 +6,13 @@
       <p><strong>Service:</strong> {{ appointment.service }}</p>
       <p><strong>Date:</strong> {{ formatDate(appointment.dateTime) }}</p>
       <p><strong>Time:</strong> {{ formatTime(appointment.dateTime) }}</p>
-  
+      <p><strong>Status:</strong> {{ appointment.status }}</p>
+
       <!-- Delete button, shown only if the user is an admin -->
       <button @click="deleteAppointment" v-if="isAdmin" class="btn btn-danger">Delete</button>
+
+      <!-- Update status button, shown only if the appointment is not yet completed -->
+    <button @click="updateStatusToCompleted" v-if="isAdmin && appointment.status !== 'Completed'" class="btn btn-success">Mark as Completed</button>
     </div>
   </template>
   
@@ -66,6 +70,15 @@
           window.location.reload()
         } catch (error) {
           console.error('Error deleting appointment:', error);
+        }
+      },
+      async updateStatusToCompleted() {
+        try {
+          await AuthService.updateAppintmentStatus(this.appointment._id);
+          this.appointment.status = 'Completed';
+          window.location.reload();
+        } catch (error) {
+          console.error('Error updating appointment status: ', error);
         }
       }
     }
