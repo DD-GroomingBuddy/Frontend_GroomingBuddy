@@ -74,7 +74,7 @@
       },
       async updateStatusToCompleted() {
         try {
-          await AuthService.updateAppintmentStatus(this.appointment._id);
+          await AuthService.updateAppointmentStatus(this.appointment._id);
           this.appointment.status = 'Completed';
           window.location.reload();
         } catch (error) {
